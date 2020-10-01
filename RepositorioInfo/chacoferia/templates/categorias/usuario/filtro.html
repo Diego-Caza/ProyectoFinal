@@ -1,0 +1,16 @@
+{% extends 'base/baseusuario.html' %}
+
+{% block content %}
+        <!-- Filtrar por Categoria -->    
+        <div class="text-center">
+            <form method="get" action="{% url 'Filter' %}" style="margin-top: 5%;">
+                <select name="filter" class="btn btn-light">
+                    {% for cat in object_list %}
+                    <option value="#" selected hidden>Seleccione una categoria.</option>
+                    <option value="{{cat.id}}">{{cat.nombre}}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-success">FILTRAR POR CATEGORIA</button>
+            </form>
+        </div>
+{% endblock %}

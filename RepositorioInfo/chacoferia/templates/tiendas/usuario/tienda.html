@@ -1,0 +1,23 @@
+{% extends 'base/baseusuario.html' %}
+
+{% block content %}
+<a href="{% url 'registro' %}"><input type="button" value="NUEVA TIENDA" class="btn btn-success newPost" style="vertical-align:middle"></a><br><br>
+<h3 class="text-center">TIENDAS REGISTRADAS</h3>
+{% for tienda in object_list %}
+<section class="tiendascard bg-secondary">
+    <div class="tarjeta bg-success text-center">
+        <div>
+            <h3>{{ tienda.nombre_tienda }}</h3>
+            <img src="{{ tienda.imagen.url }}" style="width: 80%;">
+            <br><br>            
+            <p class="text-justify">{{ tienda.descripcion }}</p>
+        </div>
+    </div>
+    <div class="mapa bg-success">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.5407946017867!2d-58.98700230000001!3d-27.4524184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450cf37e07c769%3A0x801b999f33f198c6!2sJuan%20B.%20Justo%2050%2C%20H3500ATA%20Resistencia%2C%20Chaco!5e0!3m2!1ses!2sar!4v1601306002520!5m2!1ses!2sar" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</section>
+<br>
+{% endfor %}
+
+{% endblock %}

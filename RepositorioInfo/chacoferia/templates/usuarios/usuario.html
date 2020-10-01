@@ -1,0 +1,13 @@
+{% extends 'base/baselogin.html' %}
+
+{% block content %}
+<center>
+<form method="POST" class="form-register" style="margin-top: 5%;">
+    <h4 class="text-center">FORMULARIO NUEVO USUARIO</h4>
+    {% csrf_token %}
+    <input class="controls" type="text" name="username" placeholder="Nombre usuario">
+    <input class="controls" type="password" name="password" placeholder="Contraseña">
+    <input class="botons" type="submit" value="Registrar">
+</form></center>
+<br><br>
+{% endblock %}

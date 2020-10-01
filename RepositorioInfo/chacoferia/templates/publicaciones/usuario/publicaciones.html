@@ -1,0 +1,38 @@
+{% extends 'base/baseusuario.html' %}
+		
+		{% block content %}
+		<!-- Aquí colocamos una separacion entre el header y el contenido -->
+		<div class="nav-item">&nbsp;</div>
+		<h4 class="font-weight-bold text-center">CARGAR PRODUCTO</h4>
+		<!-- Formulario de publicación -->
+		<form method="POST" class="offset-sm-3" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="row">
+				<div class="col-8">
+					<label>Nombre:</label>{{ form.nombre }}<br>
+				</div>
+				<div class="col-6">
+					<label>Categoria:</label>{{ form.categoria }}
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="botonADMargin">
+							<a class="links" href="{% url 'Newcategorias' %}" target="_blank" onclick="window.open(this.href,this.target,'width=400,height=250,top=200,left=450,toolbar=0,location=0,status=0,menubar=0,scrollbars=0,');return false;"><span class="botonAD text-success"> &#10010;</span></a>&nbsp;&nbsp;&nbsp;
+							<!--<a class="links" href="#"><span class="botonAD text-warning">&#9998;</span></a>-->
+						</div>
+					</div>
+				</div>
+				<div class="col-8">
+					<label>Imagen:</label>{{ form.imagen }}<br>
+					<label>Extracto:</label>{{ form.texto_corto }}<br>
+					<label>Información del producto:</label>{{ form.detalle }}<br>
+					<label>Precio:</label>{{ form.precio }}<br>
+					<label>Disponible:</label>&nbsp;&nbsp;{{ form.avalible }}<br>
+					<button class="btn btn-success font-weight-bold btn-user btn-block">Publicar</button>
+				</div>
+			</div>
+		</form>
+		<br>
+		<br>
+		<br>
+		{% endblock %}

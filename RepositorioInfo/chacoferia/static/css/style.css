@@ -1,0 +1,131 @@
+.logo{
+  float: left;
+  margin-left: 5%;
+  width: 15%;
+}
+.noSearch{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.session{
+  float: right;
+  margin-top: 10px
+}
+.ini{
+  margin-right: 20px;
+}
+.botonAD{
+  font-size:30px;
+}
+.botonADMargin{
+  margin-top: 30px
+}
+.links{
+  text-decoration: none;
+}
+.menu{
+    background-color: black;
+    margin-top: 8%
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu ul li{
+    display: inline-block;
+    
+}
+
+.menu ul li a{
+    color: white;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    background-color: #4CAF50;
+    border-bottom: 10px white;
+}
+.aliniar{
+    text-align: center;
+}
+.blockPost{
+  width: 23%;
+  float: left;
+  margin: 1%;
+  background-color: #FEF9E7;
+  border-radius: 4px;
+}
+.imgPost{
+  width: 200px;
+  height: 180px;
+  margin:5%;
+  object-fit: cover;
+}
+.marcoPost{
+  padding: 5%;
+}
+.textPost{
+  font-size: 12px;
+}
+/* Error 404 */
+.error404{
+  background: url('https://static8.depositphotos.com/1258191/873/i/450/depositphotos_8738995-stock-photo-hands-of-a-craftsman.jpg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+}
+.text{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 5px;
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+}
+.newPost{
+  float: right;
+  margin-top: 2%;
+}
+.blockQuien{
+  display:block;
+  position:relative;
+  background-color: #FEF9E7;
+  width: 50%;
+  margin: 1%;
+  border-radius: 4px;
+  padding:40px;
+}
+@media only screen and (max-width: 480px) {
+  .logo{
+    width: 30%;
+  }
+  .menu{
+      margin-top: 60%
+  }
+
+}
+@media only screen and (max-width: 360px) {
+  .menu{
+    margin-top: 55%
+  }
+  .blockPost{
+    width: 99%;
+    float: left;
+    margin: 1%;
+    background-color: #FEF9E7;
+    border-radius: 4px;
+  }
+  .marcoPost{
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+.form-register {
+    width: 400px;
+    background: #303952;
+    padding: 30px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+.controls {
+    width: 100%;
+    background: #303952;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid green;
+    font-family: "calibri";
+    font-size: 18px;
+    color: white;
+}
+.form-register .botons {
+    width: 100%;
+    background: green;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}

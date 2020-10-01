@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<center>
+<form method="POST" class="form-register" style="margin-top: 5%;">
+    <h4 class="text-center">FORMULARIO NUEVO USUARIO</h4>
+    {% csrf_token %}
+    <input class="controls" type="text" name="username" placeholder="Nombre usuario">
+    <small>El nombre de usuario solo puede contener letras, números y los caracteres @/./+/-/_.</small>
+    <input class="controls" type="text" name="first_name" placeholder="Nombres">
+    <input class="controls" type="text" name="last_name" placeholder="Apellidos">
+    <input class="controls" type="text" name="email" placeholder="email@example.com">
+    <input class="controls" type="password" name="password1" placeholder="Contraseña">
+    <small>Su contraseña debe contener por lo menos 8 caracteres.</small><br>
+    <small>Su contraseña debe estar compuesta por letras y numeros.</small>
+    <input class="controls" type="password" name="password2" placeholder="Confirme contraseña">
+    <input class="botons" type="submit" value="Registrar">
+</form></center>
+<br><br>
+{% endblock %}

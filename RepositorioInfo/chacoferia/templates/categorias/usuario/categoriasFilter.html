@@ -1,0 +1,24 @@
+{% extends 'base/baseusuario.html' %}
+
+{% block content %}
+    <a href="{% url 'Categorias' %}"><input type="button" value="FILTRAR POR CATEGORIA" class="btn btn-success newPost"></a>
+    <br><br>
+    <h3 class="text-center">VISTAS POR CATEGORIAS</h3>
+    <!-- Mostrar Productos filtrados -->
+    {% for catFilter in categoria %}
+    <div class="blockPost">
+        <img src="{{ catFilter.imagen.url }}" alt="" class="imgPost">
+
+        <a class="nav-link" href="{% url 'DetalleProducto' catFilter.pk %}"><h5 class="text-center">{{ catFilter.nombre }}</h5></a>
+        <div class="marcoPost">
+            <p class="textPost text-justify">{{ catFilter.texto_corto }}</p>
+        </div>
+        <h5 class="valor text-center"><label>Precio:&nbsp;$</label>{{ catFilter.precio }}</h5>
+        {% if catFilter.avalible %}
+        <label>Stock:&nbsp;</label><small>Disponible</small>
+        {% else %}
+        <label>Stock:&nbsp;</label><small>Por encargo</small>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% endblock %}

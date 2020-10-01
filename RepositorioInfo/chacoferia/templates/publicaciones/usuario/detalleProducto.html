@@ -1,0 +1,20 @@
+            {% extends 'base/baseusuario.html' %}
+
+            {% block content %}
+            <div class="row">
+                <div class="col-md-12 well">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <!-- Titulo-->
+                                <h2 class="text-center card-title">{{ producto.nombre }}</h2>
+                                <center><img src="{{ producto.imagen.url }}" class="card-img-top" style="width: 40%;"></center>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">{{ producto.detalle }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}

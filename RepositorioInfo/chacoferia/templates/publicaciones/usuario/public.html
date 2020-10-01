@@ -1,0 +1,24 @@
+{% extends 'base/baseusuario.html' %}
+
+{% block content %}
+    <a href="{% url 'new' %}"><input type="button" value="NUEVA PUBLICACION" class="btn btn-success newPost"></a>
+    <br><br>
+    <center><h3>PRODUCTOS PUBLICADOS</h3>
+    {% for post in object_list %}
+    <div class="blockPost">
+    	<img src="{{ post.imagen.url }}" alt="" class="imgPost">
+
+    	<a class="nav-link" href="{% url 'DetalleProducto' post.pk %}"><h5 class="text-center">{{ post.nombre }}</h5></a>
+	    <div class="marcoPost">
+	    	<p class="textPost text-justify">{{ post.texto_corto }}</p>
+    	</div>
+        <h5 class="valor text-center"><label>Precio:&nbsp;$</label>{{ post.precio }}</h5>
+        {% if post.avalible %}
+        <label>Stock:&nbsp;</label><small>Disponible</small>
+        {% else %}
+        <label>Stock:&nbsp;</label><small>Por encargo</small>
+        {% endif %}
+    </div>
+    {% endfor %}
+    </center>
+{% endblock %}

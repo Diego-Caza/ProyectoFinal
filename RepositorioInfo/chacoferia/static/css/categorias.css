@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+ body {
+    background-color:  #4CAF50;
+
+}
+.form-group  {
+    
+    height: 40px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 40px;
+    color: black;
+}
+
+ .form-group .botons {
+    width: 10%;
+    background: green;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}

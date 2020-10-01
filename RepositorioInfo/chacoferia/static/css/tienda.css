@@ -1,0 +1,77 @@
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #5a9935;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 13px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    top: 11em;
+    right: 6.7em;
+    
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+ }
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.tiendascard {
+      margin: 5px;
+      display: flex;
+      padding: 25px;
+      margin-top: 1%;
+      width: 100%;
+}
+
+.tarjeta {
+      flex: 1;
+      margin: 5px;
+      padding: 20px;
+      width: 80%;
+}
+
+.tarjeta div {
+    flex: 1;
+    padding: 20px;
+    margin: 5px;
+    background-color: azure;
+
+}
+
+.tarjeta h1{
+    background-color: aquamarine;
+}
+
+.mapa {
+    flex: 1;
+    margin: 5px;
+    padding: 20px;
+}
+

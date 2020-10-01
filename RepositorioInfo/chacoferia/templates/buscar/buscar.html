@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <center><h3>RESULTADOS DE LA BUSQUEDA</h3>
+    {% if producto %}
+        {% for prods in producto %}
+        <div class="blockPost">
+            <img src="{{ prods.imagen.url }}" alt="" class="imgPost">
+
+            <a href="{% url 'detalleProducto' prods.pk %}"><h5 class="text-center">{{ prods.nombre }}</h5></a>
+            <div class="marcoPost">
+                <p class="textPost text-justify">{{ prods.texto_corto }}</p>
+            </div>
+            <h5 class="text-center"><label>Precio:&nbsp;$</label>{{ prods.precio }}</h5>
+            <label>Stock:&nbsp;</label><small>{{ prods.avalible }}</small>
+        </div>
+        {% endfor %}
+    {% else %}
+            {% block noSearch %}
+            <img class="noSearch" src="{% static 'sin-resultados1.png' %}" alt=""><br>
+            {% endblock%}
+        <h3>No encontramos productos con esa descripción.</h3>
+         <h4>Intentalo nuevamente o buscá por categorías.</h4>
+    {% endif %}
+    <br><br>
+    </center>
+{% endblock %}

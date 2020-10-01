@@ -1,0 +1,35 @@
+.iphone{
+    background-color: #FEF9E7;
+}
+.form-ayuda h4 {
+    
+        height: 40px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+        margin: 5%;
+}
+   
+.form-ayuda h2 {
+    width: 100%;
+    background: yellow;
+    border: none;
+    padding: 15px;
+}
+.form-ayuda button{
+   
+    color: black;
+    font-size: 20px;
+}
+@media only screen and (max-width: 480px) {
+    .form-ayuda h4 {
+        margin-top: 5%;
+        margin-bottom: 25%;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .form-ayuda h4 {
+        margin-top: 5%;
+        margin-bottom: 30%;
+    }
+}
